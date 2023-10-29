@@ -1,0 +1,19 @@
+{
+  "manifest_version": 2,
+  "name": "ImageUploadConverter",
+  "version": "3.7",
+  "description": "Convert uploaded webp and jxl to png on upload",
+  "icons": {
+    "549": "./icons/clipboard2file.png"
+  },
+  "permissions": ["<all_urls>"],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "run_at": "document_start",
+      "all_frames": true,
+      "match_about_blank": true,
+      "js": ["./content/all_frames.js"]
+    }
+  ]
+}
